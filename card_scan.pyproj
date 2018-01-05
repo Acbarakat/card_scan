@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e52810de-0a88-4348-bbe9-1887442157ce}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>run_scan.py</StartupFile>
+    <SearchPath>"C:\Users\Allonte\Documents\GitHub\card_scan"</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterArguments>-OO</InterpreterArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="templates\fetch_decklist.html" />
+    <Content Include="templates\index.html" />
+    <Content Include="templates\outstanding_cards.html" />
+    <Content Include="templates\rate.html" />
+    <Content Include="templates\results.html" />
+    <Content Include="templates\search.html" />
+    <Content Include="templates\verify.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="config.py" />
+    <Compile Include="cv_utils.py" />
+    <Compile Include="detect_card.py" />
+    <Compile Include="match_card.py" />
+    <Compile Include="models.py" />
+    <Compile Include="scan_card.py" />
+    <Compile Include="search_card.py" />
+    <Compile Include="utils\compress_boxes.py" />
+    <Compile Include="utils\run_match.py" />
+    <Compile Include="run_scan.py" />
+    <Compile Include="utils\__init__.py" />
+    <Compile Include="website.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="templates" />
+    <Folder Include="utils" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

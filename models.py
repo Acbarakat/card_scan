@@ -1,6 +1,6 @@
-from elixir import metadata, Entity, Field, using_options
-from elixir import Integer, UnicodeText, BLOB, Enum, DateTime, Boolean
-from elixir import ManyToOne, OneToMany, OneToOne
+from panacea import metadata, Entity, Field, using_options
+from panacea import Integer, UnicodeText, BLOB, Enum, DateTime, Boolean
+from panacea import ManyToOne, OneToMany, OneToOne
 import sys
 import config
 
